@@ -1,5 +1,7 @@
 package chapter5;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class ch5_13 {
@@ -11,11 +13,14 @@ public class ch5_13 {
 		
 		for(int i = 0; i < words.length; i++) {
 			char[] question = words[i].toCharArray(); //String을 char[]로 변환
+//			System.out.println(Arrays.toString(question));
 			
-			
-			
-			
-			
+			int ran = (int)(Math.random()*3) + 1;
+			for(int j = 0; j < question.length; j++) {
+				char tmp = question[ran];
+				question[ran] = question[j];
+				question[j] = tmp;
+			}
 			
 			System.out.printf("Q%d. %s의 정답을 입력하세요> ", i+1, new String(question));
 			String answer = scan.nextLine();

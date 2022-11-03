@@ -12,7 +12,9 @@ public class ch5_6 {
 		
 		
 		for(int i = 0; i < coinUnit.length; i++) {
+			
 			if(money / coinUnit[i] != 0) {
+				
 				System.out.println( coinUnit[i] + "원: " + money / coinUnit[i]);
 				money = money % coinUnit[i];
 				

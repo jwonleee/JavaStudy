@@ -10,22 +10,26 @@ public class ch5_8 {
 		int[] counter = new int[4];
 		int count = 0;
 		
-		System.out.println(Arrays.toString(answer));
-		for(int i = 0; i < answer.length; i++) {
-			Arrays.sort(answer);
-			if(answer[i] == answer[i+1]) {
-				count += 1;
-			} 
-		}
-		System.out.print(count);
+		Arrays.sort(answer);
 		
-//		for(int i = 0; i < counter.length; i++) {
-//			
-//			if(cou) {
-//				System.out.print("*");
-//			}
-//			
-//			System.out.println();
-//		}
+//		System.out.println(Arrays.toString(answer));
+		// [1, 1, 1, 2, 2, 3, 3, 4, 4, 4, 4]
+		
+		for(int i = 0; i < answer.length; i++) {
+ 			counter[answer[i]-1]++;
+		}
+		
+		
+		for(int i = 0; i < counter.length; i++) {
+			System.out.print(counter[i]);
+			
+			for(int j = 0; j < counter[i]; j++) {
+				System.out.print("*");
+				
+			}
+			
+			System.out.println();
+		}
+		
 	}
 }

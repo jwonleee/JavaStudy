@@ -29,7 +29,7 @@ public class ch5_7 {
 				coin[i] -= coinNum;
 			}
 			
-			money =- (coinNum*coinUnit[i]);
+			money = money - (coinNum*coinUnit[i]); //여기 momney -= (coinNum*coinUnit[i]);하면 -2500됨
 		
 			System.out.println(coinUnit[i] + "원: " + coinNum);
 		}
