@@ -16,15 +16,15 @@ public class ch5_10 {
 		
 		//문자열 src의 문자를 charAt()으로 하나씩 읽어서 변환 후 result 에 저장
 		for(int i = 0; i < src.length(); i++) {
+			
 			char ch = src.charAt(i);
-			
-			
-			
-			
-			
-			
-			
+			if(ch >= 'a' && ch <= 'z') {
+				result += abcCode[ch -'a'];
+			} else if(ch >= '0' && ch <= '9') {
+				result += numCode[ch-'0'];
+			}
 		}
+			
 	
 		System.out.println("src: " + src);
 		System.out.println("result: " + result);
