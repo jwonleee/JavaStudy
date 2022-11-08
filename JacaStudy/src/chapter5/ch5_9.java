@@ -22,12 +22,9 @@ public class ch5_9 {
 			
 		System.out.println();
 		
-		for(int i = 0; i < star.length; i++) {
+            for(int i = 0; i < star.length; i++) {
 			for(int j = star[i].length; j > 0; j++) {
-				
-				char[] tmp = star[i];
-				star[i] = star[j];
-				star[j] = tmp;
+				result[j][i] = star[3-i][j];
 			}
 		}
 		

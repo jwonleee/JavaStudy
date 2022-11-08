@@ -16,10 +16,15 @@ public class ch5_11 {
 		
 		for(int i = 0; i < score.length; i++) {
 			for(int j = 0; j < score[i].length; j++) {
+					
+				result[i][j] += score[i][j];
 				
+				result[i][result[i].length-1] += score[i][j];
 				
+				result[result[j].length+1][j] += score[i][j];
 				
-				
+//				result[score.length+1][score[0].length+1] += score[i][j];
+			
 			}
 		}
 		
