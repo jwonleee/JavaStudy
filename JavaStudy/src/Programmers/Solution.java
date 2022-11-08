@@ -5,21 +5,25 @@ import java.util.Arrays;
 class Solution {
 	
 	public static void main(String[] args) {
-		int[] result = {2, 4, 8};
-		System.out.println(solution(result));
+		
+		System.out.println(solution("allpe","apple"));
 	} //main 끝
 	
 	
-    public static int solution(int[] common) {
+    public static int solution(String before, String after) {
         int answer = 0;
-        int a = common[1] - common[0]; //등차
-        int b = common[1] / common[0]; //등비
+        String str = "";
         
-        	if(common[2] - common[1] == a) {
-        		answer = common[common.length-1] + a;
-        	} else if(common[2] / common[1] == b) {
-        		answer = common[common.length-1] * b;
-        	} 
+        for (int i = before.length() - 1; i >= 0; i--) {
+        	 str = str + before.charAt(i);
+//        	 System.out.println(str); // hello
+        }
+        
+        if(str.equals(after)) {
+        	answer = 1;
+        } else {
+        	answer = 0;
+        }
         
         return answer;
     }
