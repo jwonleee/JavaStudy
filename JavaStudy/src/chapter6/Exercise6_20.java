@@ -5,12 +5,14 @@ import java.util.Arrays;
 public class Exercise6_20 {
 	
 	public static int[] shuffle (int[] arr) {
-		int ran = (int)Math.random();
 		
-		for(int i = 1; i < arr.length; i++) {
-			int tmp = arr[0];
-			arr[0] = arr[ran];
-			arr[ran] = tmp;
+		for(int i = 0; i < arr.length; i++) {
+			int ran = (int)(Math.random() * arr.length); //값 0~8
+			int ran2 = (int)(Math.random() * arr.length); //값 0~8
+			// 랜덤값 2개 설정해서 바꿔줌
+			int temp = arr[ran];
+			arr[ran] = arr[ran2];
+			arr[ran2] = temp;
 		}
 		return arr;
 	};

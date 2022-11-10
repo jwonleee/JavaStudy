@@ -18,7 +18,7 @@ public class Exercise6_4 {
 	
 }
 
-class Student {
+class Student1 { //1 지우고 보기
 	
 	String name;
 	int ban;
@@ -45,7 +45,11 @@ class Student {
 	}
 	
 	public float getAverage() {
-		return (int)(Math.round(getTotal() / 3f * 10));
+		return (float)(Math.round((getTotal() / 3f) * 10) / 10.0) ;
 	}
+//		(getTotal() / 3f) * 10 = 78.66666
+//		Math.round((getTotal() / 3f) * 10) = 787.0
+//		(float)(Math.round((getTotal() / 3f) * 10) / 10.0 = 78.7
+//		전체적으로 float 형변환 필요
 	
 }

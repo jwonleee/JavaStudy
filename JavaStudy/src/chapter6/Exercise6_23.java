@@ -3,12 +3,24 @@ package chapter6;
 import java.util.Arrays;
 
 public class Exercise6_23 {
-	public static int max (int[] arr) {
-		
-		return 0;
-	}
 	
+
+	public static int max (int[] arr) {
+		if(arr==null || arr.length == 0) {
+			return -999999;
+		}
+		
+			for(int i = 1; i < arr.length; i++) {
+				if(arr[0] < arr[i]) {
+				   arr[0] = arr[i];
+				}
+			}
+			return arr[0];
+			
+	}	
+		
 	public static void main(String[] args) {
+		
 		int[] data = {3, 2, 9, 4, 7};
 		System.out.println(Arrays.toString(data));
 		System.out.println("최대값:"+max(data));
@@ -16,4 +28,5 @@ public class Exercise6_23 {
 		System.out.println("최대값:"+max(new int[] {})); //크기가 0인 배열
 	}
 	
+
 }
