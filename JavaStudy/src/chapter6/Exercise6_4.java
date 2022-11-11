@@ -27,11 +27,11 @@ class Student1 { //1 지우고 보기
 	int eng;
 	int math;
 	
-	Student() { //기본 생성자
+	Student1() { //기본 생성자
 		
 	}
 	
-	Student(String name, int ban, int no, int kor, int eng, int math) {
+	Student1(String name, int ban, int no, int kor, int eng, int math) {
 		this.name = name;
 		this.ban = ban;
 		this.no = no;

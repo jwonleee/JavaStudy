@@ -6,7 +6,6 @@ public class Exercise6_5 {
 		Student s = new Student("홍길동", 1, 1, 100, 60, 76);
 		
 		System.out.println(s.info());
-		
 	}
 
 }
