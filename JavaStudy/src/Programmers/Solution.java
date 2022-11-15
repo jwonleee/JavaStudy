@@ -5,26 +5,27 @@ import java.util.Arrays;
 class Solution {
 	
 	public static void main(String[] args) {
+		int[] numbers = {1, 2, 3, 4, 5, 6};
 		
-		System.out.println(solution("allpe","apple"));
+		System.out.println(solution(numbers, 5));
 	} //main 끝
 	
 	
-    public static int solution(String before, String after) {
-        int answer = 0;
-        String str = "";
+	public static int solution(int[] numbers, int k) { // k번째 사람이면
+        int answer = 1;
         
-        for (int i = before.length() - 1; i >= 0; i--) {
-        	 str = str + before.charAt(i);
-//        	 System.out.println(str); // hello
-        }
-        
-        if(str.equals(after)) {
-        	answer = 1;
-        } else {
-        	answer = 0;
-        }
-        
-        return answer;
+        if(numbers.length % 2 == 0) { //  = 짝수이면
+        	int i = 0;
+        	while(true) { // 무한반복
+        		if(i < k) {
+        			answer = answer + 2;
+        		
+        		if(i == k-1) break;
+        		i++;
+        	}
+        } 
+       
     }
+		return answer;
+}
 }
