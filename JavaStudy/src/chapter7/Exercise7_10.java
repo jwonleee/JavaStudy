@@ -19,7 +19,7 @@ class MyTv2 {
 	private boolean isPowerOn;
 	private int		channel;
 	private int		volume;
-	public int rewind;
+	private int     rewind;
 	
 	final int MAX_VOLUME = 100;
 	final int MIN_VOLUME = 0;
@@ -39,8 +39,10 @@ class MyTv2 {
 	}
 	public void setChannel(int channel) {
 		if(MIN_CHANNEL <= channel && channel <= MAX_CHANNEL) {
-			this.channel = channel;
-			rewind = channel;
+			
+			
+			rewind = this.channel; // 매개변수가 범위 내면 지금 채널은 rewind에 저장, 다음문장이 되면 지금채널은 전 채널이됨
+			this.channel = channel; // 매개변수 받은 채널을 지금 채널에 저장
 		} else {
 			System.out.println("올바른 채널을 입력하세요");
 		}
@@ -56,8 +58,8 @@ class MyTv2 {
 		}
 	}
 	
-	public void gotoPrevChannel() {
-		this.channel = rewind;
+	public void gotoPrevChannel() { // setChannel에서 저장되어 있는 rewind 호출
+		setChannel(rewind);
 	}
 	
 	
