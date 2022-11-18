@@ -2,7 +2,6 @@ package Programmers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 class Solution3 {
 
@@ -20,7 +19,7 @@ class Solution3 {
 		String[] arr = s.split("", s.length()); // String 배열에 split으로 쪼개서 s길이만큼 담기
 		
 		String[] result = new String[arr.length]; // 겹치는 값이 없을 경우에 담을 String 배열
-		System.out.println(Arrays.toString(arr)); // [a, b, c, a, b, c, a, d, c]
+//		System.out.println(Arrays.toString(arr)); // [a, b, c, a, b, c, a, d, c]
 		
 		for(int i = 0; i < arr.length; i++) { // arr.lenght = 9, i=0~8
 			for(int j = 0; j < arr.length ; j++ ) { // j=0~8
@@ -32,33 +31,48 @@ class Solution3 {
 					result[i] = null; // 겹치는 값이 없는 배열의 값을 null로 정한 후 break;
 					break;
 				}
-//				if( !arr[i].equals(arr[j]) ) { // 같은게 없으면 변수 a에 넣기
-//					a = arr[i];  
-//				} else { // 같은게 있으면
-//					a = null;
-//					break;
-//				}
+
 				
 			}
-			
-			
 		}
 		
-		Arrays.sort(result);
-		System.out.println(Arrays.toString(result));
+//		System.out.println(Arrays.toString(result));
+		
+		
+		
+		
 		
 //		List<String> strList = new ArrayList<>(Arrays.asList(result));
 //		
+//				
+//		List<String> sorted_list = strList.stream().sorted().collect(Collectors.toList());
+//		System.out.println(sorted_list);		
+				
+//				.sorted(Comparator.comparing(String::, Comparator.nullsLast(Comparator.naturalOrder())))
+//				.collect(Collectors.toList());
 //		 for(int i = 0; i < strList.size() -1 ; i++) {
 //			  if(strList.get(i) == null) {
 //				  strList.remove(i);
-//			  } else {
+//			  } else { 
 //				  continue;
 //			  }
 //		  }
 //		  result = strList.toArray(new String[0]);
-//		
-//		  System.out.println("2번째 인덱스의 요소 삭제 후: " + Arrays.toString(result));
+////		
+//		  System.out.println("인덱스의 요소 삭제 후: " + Arrays.toString(result));
+		
+		for(int i = 0; i < result.length; i++) {
+			if(result[i] == null) {
+				
+			} else {
+				answer += result[i];
+			}
+		}
+		
+		char[] charArr = answer.toCharArray();
+		Arrays.sort(charArr);
+		answer = new String(charArr);
+		
 		  
 		return answer;
 	}
