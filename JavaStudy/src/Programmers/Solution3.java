@@ -30,36 +30,9 @@ class Solution3 {
 					if(i == j) { continue; } // 본인 자신과 비교하는 경우는 그냥 넘어감
 					result[i] = null; // 겹치는 값이 없는 배열의 값을 null로 정한 후 break;
 					break;
-				}
-
-				
+				}		
 			}
 		}
-		
-//		System.out.println(Arrays.toString(result));
-		
-		
-		
-		
-		
-//		List<String> strList = new ArrayList<>(Arrays.asList(result));
-//		
-//				
-//		List<String> sorted_list = strList.stream().sorted().collect(Collectors.toList());
-//		System.out.println(sorted_list);		
-				
-//				.sorted(Comparator.comparing(String::, Comparator.nullsLast(Comparator.naturalOrder())))
-//				.collect(Collectors.toList());
-//		 for(int i = 0; i < strList.size() -1 ; i++) {
-//			  if(strList.get(i) == null) {
-//				  strList.remove(i);
-//			  } else { 
-//				  continue;
-//			  }
-//		  }
-//		  result = strList.toArray(new String[0]);
-////		
-//		  System.out.println("인덱스의 요소 삭제 후: " + Arrays.toString(result));
 		
 		for(int i = 0; i < result.length; i++) {
 			if(result[i] == null) {
@@ -71,7 +44,7 @@ class Solution3 {
 		
 		char[] charArr = answer.toCharArray();
 		Arrays.sort(charArr);
-		answer = new String(charArr);
+		answer = String.valueOf(charArr);
 		
 		  
 		return answer;

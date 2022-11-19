@@ -1,12 +1,10 @@
 package Programmers;
 
-import java.util.Arrays;
-
 class Solution2 {
    
    public static void main(String[] args) {
-      String[] result = {"aya", "yee", "u", "maa",  "wyeoo"};
-      String[] result2 = {"ayaye", "uuuma", "ye", "yemawoo", "ayaa"};
+      String[] result2 = {"aya", "yee", "u", "maa",  "wyeoo"};
+      String[] result = {"ayaye", "uuuma", "ye", "yemawoo", "ayaa"};
       
       System.out.println(solution(result));
    } //main 끝
@@ -25,10 +23,13 @@ class Solution2 {
 
 
       for(int i = 0; i < babbling.length; i++) {
-         if(babbling[i].replace("aya","").replace("ye","").replace("woo", "").replace("ma", "") == "") { // 첫번째부터 ""로 바꾸고 결론적으로 ""나오면 하나씩 카운트
+         if(babbling[i].replace("aya"," ").replace("ye"," ").replace("woo", " ").replace("ma", " ").trim() == "") {
+        	 // 첫번째부터 ""로 바꾸고 결론적으로 ""나오면 하나씩 카운트
             answer = answer + 1; // 나올 수 있는 값
          }    
       }
+      
+     
       
       return answer;
    } 
