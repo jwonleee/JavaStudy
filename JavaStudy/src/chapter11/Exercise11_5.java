@@ -29,7 +29,7 @@ class Student implements Comparable { //this와 매개변수 비교
 		return name + "," + ban + "," + no + "," + kor + "," + eng + "," + math + "," + getTotal() + "," + getAverage();
 	}
 
-	public int compareTo(Object o) { //비교메서드
+	public int compareTo(Object o) { //비교메서드, 오브젝트로 받아서 name이라는 변수가 있는지 없는지 모르니까 아래에서 형변환 여부 확인, 확인한 후 student타입으로 형변환 해줌
 		
 		if(o instanceof Student) { //형변환 여부 확인, 왼쪽에는 참조변수를 오른쪽에는 타입(클래스명)이 피연산자로 위치
 			Student s = (Student)o; //Student 타입으로 매개변수를 형변환해줌(줄여줌)

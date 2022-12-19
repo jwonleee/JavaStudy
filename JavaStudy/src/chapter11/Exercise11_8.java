@@ -2,7 +2,7 @@ package chapter11;
 
 import java.util.*;
 
-class Student2 {
+class Student2 { //다시보기
 	String name;
 	int ban;
 	int no;
@@ -35,18 +35,13 @@ class Student2 {
 
 
 	public int compareTo(Object o) {
-		
-		if(o instanceof Student2) {
-			Student2 st = (Student2) o;
-			
+		if(o instanceof Student2) { //형변환 가능여부 확인
+			Student2 st = (Student2) o; //캐스팅
 			return st.getTotal() - this.getTotal(); // 총점기준 내림차순 정렬
 			//this.getTotal() - st.getTotal() 은 오름차순 정렬
-		
 		} else {
-			
 			return -1;
 		}
-
 	}
 	
 	public String toString()   {
@@ -58,9 +53,9 @@ class Student2 {
 		+","+math
 		+","+getTotal()
 		+","+getAverage()
-		+","+schoolRank    //   새로추가 
+		+","+schoolRank    // 새로추가 
 		;
-		}
+	}
 	
 	
 	
@@ -68,8 +63,8 @@ class Student2 {
 
 public class Exercise11_8 {
 
-	public   static   void   calculateSchoolRank(List list)   { 
-		Collections.sort(list);   // 먼저 list를 총점기준 내림차순으로 정렬한다. compareTo메서드 실행
+	public static void calculateSchoolRank(List list) { 
+		Collections.sort(list); // 먼저 list를 총점기준 내림차순으로 정렬한다. 정렬할 때 compareTo메서드 실행됨
 		
 		int prevRank = -1; //이전 전교등수
 		int prevTotal = -1; //이전 총점
@@ -85,18 +80,16 @@ public class Exercise11_8 {
 		*/
 		
 		for(int i = 0; i < length; i++) {
-			Student2 s = (Student2)list.get(i); //Student 객체 하나씩 꺼냄
+			Student2 s = (Student2)list.get(i); //Student2 객체 하나씩 꺼냄
 			
-			if(s.total == prevTotal) {
-			   s.schoolRank = prevRank;
+			if(s.total == prevTotal) { //값이 같으면
+			   s.schoolRank = prevRank; //schoolRank는 이전 랭크값이랑 같지만, i+1은 나옴
 			} else {
-				
-				s.schoolRank =  i + 1; //?????????
-				
+				s.schoolRank =  i + 1; //다시 생각해보기!!!A.......
 			}
 			
-			prevRank = s.schoolRank;
-			prevTotal = s.total;
+			prevRank = s.schoolRank; //현재등수를 이전 등수에 저장
+			prevTotal = s.total; //현재총점을 이전 총점에 저장
 		}
 		
 		

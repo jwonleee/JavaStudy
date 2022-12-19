@@ -1,28 +1,25 @@
 package Programmers;
 
-import java.util.Arrays;
-
 public class ex {
 
 	public static void main(String[] args) {
+		int n = 3;	
 		
-		int[] arr = {5, 23, 1, 43, 100, 200, 40};
-		
-		
-		
-		for(int i = 0; i < arr.length; i++) {
-			for(int j = i+1; j < arr.length; j++) {
-				
-				if(arr[i] > arr[j]) {
-					int tmp = 0;
-					tmp = arr[i];
-					arr[i] = arr[j];
-					arr[j] = tmp;
-				}
-			}
-		}
-			
-		
-		System.out.println(Arrays.toString(arr));
-	}
+		System.out.println(solution(n));
+	}//main의 끝
+	
+	public static String solution(int n) {
+		StringBuffer sb = new StringBuffer(); //StringBuffer 생성
+        
+        
+        for(int i = 0; i < n; i++) {
+        	if(i%2 == 0) { //짝수이면
+        		sb.append("수");
+        	} else if(i%2 == 1) { //홀수이면
+        		sb.append("박");
+        	}
+        	      	
+        }
+        return sb.substring(0);
+    }
 }

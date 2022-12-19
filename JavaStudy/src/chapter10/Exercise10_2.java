@@ -16,7 +16,11 @@ public class Exercise10_2 {
 		 * 6. 만일 from의 일(DAY_OF_MONTH)이 21일 이후고 to의 일(DAY_OF_MONTH)이 21일 이전이면 monDiff의 값을 1 감소시킨다.
 		 */
 		
-		if(from == null || to == null) {
+		if(from == null+
+				
+				
+				
+				|| to == null) {
 			return 0;
 		}
 		

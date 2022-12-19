@@ -1,3 +1,5 @@
+package chapter10;
+
 import java.util.*;
 
 class Exercise10_5 {
