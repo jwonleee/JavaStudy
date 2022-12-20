@@ -20,7 +20,7 @@ public class Solution {
        
        for(int i = 0; i < dots.length; i++) {
     	   max = Math.max(dots[i], dots[0]);
-    	   min = Math.min(dots[i], dots[1]);
+    	   min = Math.min(dots[i], dots[1]); 
        }
        
        
