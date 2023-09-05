@@ -2,7 +2,7 @@ package chapter11;
 
 import java.util.*;
 
-class Studentt implements Comparable { //다시보기
+class Studentt implements Comparable<Object> { //다시보기
 	String name;
 	int ban;
 	int no;
@@ -67,7 +67,7 @@ public class Exercise11_6 {
 	
 	public static void main(String[]   args)   {
 		
-		TreeSet set = new TreeSet(new Comparator() {  // 익명클래스
+		TreeSet<Studentt> set = new TreeSet<>(new Comparator() {  // 익명클래스
 		
 			public int compare(Object o1, Object o2)   {
 				if(o1 instanceof Studentt && o2 instanceof Studentt)   { 

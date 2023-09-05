@@ -1,10 +1,7 @@
 package chapter10;
 
-import java.text.SimpleDateFormat;
 import java.time.ZoneId;
-import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
-import java.util.GregorianCalendar;
 
 public class Exercise10_8 {
 

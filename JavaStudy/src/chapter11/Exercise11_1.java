@@ -4,11 +4,11 @@ import java.util.*;
 
 class Exercise11_1 {
 	public static void main(String[] args) {
-		ArrayList list1 = new ArrayList();
-		ArrayList list2 = new ArrayList();
-		ArrayList kyo = new ArrayList(); // 교집합
-		ArrayList cha = new ArrayList(); // 차집합
-		ArrayList hap = new ArrayList(); // 합집합
+		ArrayList<Integer> list1 = new ArrayList<>();
+		ArrayList<Integer> list2 = new ArrayList<>();
+		ArrayList<Integer> kyo = new ArrayList<>(); // 교집합
+		ArrayList<Integer> cha = new ArrayList<>(); // 차집합
+		ArrayList<Integer> hap = new ArrayList<>(); // 합집합
 		list1.add(1);
 		list1.add(2);
 		list1.add(3);

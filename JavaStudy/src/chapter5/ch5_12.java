@@ -1,7 +1,5 @@
 package chapter5;
 
-import java.util.Scanner;
-
 public class ch5_12 {
 
 	public static void main(String[] args) {
@@ -9,12 +7,6 @@ public class ch5_12 {
 			String[] words = { "chair", "computer", "integer"};
 			String[] meanings = {"의자", "컴퓨터", "정수"};
 			int count = 0;
-			
-			Scanner sc = new Scanner(System.in);
-		
-			
-			
-			
 			
 			
 			

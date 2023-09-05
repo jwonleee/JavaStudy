@@ -1,8 +1,5 @@
 package chapter7;
 
-import java.awt.desktop.SystemSleepEvent;
-import java.util.Arrays;
-
 public class Exercise7_19 {
 
 	public static void main(String[] args) {

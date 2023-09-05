@@ -97,7 +97,7 @@ public class Exercise11_8 {
 	}
 	
 	public static void main(String[] args) {
-		ArrayList list = new ArrayList();
+		ArrayList<Student2> list = new ArrayList<>();
 		list.add(new Student2("이자바", 2, 1, 70, 90, 70));
 		list.add(new Student2("안자바", 2, 2, 60, 100, 80));
 		list.add(new Student2("홍길동", 1, 3, 100, 100, 100));

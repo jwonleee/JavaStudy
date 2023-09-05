@@ -2,13 +2,13 @@ package chapter11;
 
 import java.util.*;
 
-class Student implements Comparable { //this와 매개변수 비교
+class Student4 implements Comparable<Object> { //this와 매개변수 비교
 	String name;
 	int ban;
 	int no;
 	int kor, eng, math;
 
-	Student(String name, int ban, int no, int kor, int eng, int math) { //전부있는 생성자
+	Student4(String name, int ban, int no, int kor, int eng, int math) { //전부있는 생성자
 		this.name = name;
 		this.ban = ban;
 		this.no = no;
@@ -44,17 +44,17 @@ class Student implements Comparable { //this와 매개변수 비교
 
 public class Exercise11_5 {
 	public static void main(String[] args) {
-		ArrayList list = new ArrayList();
-		list.add(new Student("홍길동", 1, 1, 100, 100, 100));
-		list.add(new Student("남궁성", 1, 2, 90, 70, 80));
-		list.add(new Student("김자바", 1, 3, 80, 80, 90));
-		list.add(new Student("이자바", 1, 4, 70, 90, 70));
-		list.add(new Student("안자바", 1, 5, 60, 100, 80)); //객체 홍길동-남궁성-김자바-이자바-안자바 순서로 담음
+		ArrayList<Student4> list = new ArrayList<>();
+		list.add(new Student4("홍길동", 1, 1, 100, 100, 100));
+		list.add(new Student4("남궁성", 1, 2, 90, 70, 80));
+		list.add(new Student4("김자바", 1, 3, 80, 80, 90));
+		list.add(new Student4("이자바", 1, 4, 70, 90, 70));
+		list.add(new Student4("안자바", 1, 5, 60, 100, 80)); //객체 홍길동-남궁성-김자바-이자바-안자바 순서로 담음
 		
 		Collections.sort(list); // list에 저장된 요소들을 정렬한다.(compareTo()호출 하면서 객체자신과 매개변수 비교함)
 		
 		
-		Iterator it = list.iterator();
+		Iterator<Student4> it = list.iterator();
 
 		while (it.hasNext())
 			System.out.println(it.next());

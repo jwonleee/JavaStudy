@@ -1,6 +1,6 @@
 package Programmers;
 
-public class ex {
+public class Ex {
 
 	public static void main(String[] args) {
 		int n = 3;	
