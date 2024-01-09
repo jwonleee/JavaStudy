@@ -23,7 +23,7 @@ public class StreamComparator {
 	}
 }
 
-class Student implements Comparable<Student> {
+class Student implements Comparable<Student> { //기본 구현 Comparable
 	String name;
 	int ban;
 	int totalScore;

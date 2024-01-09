@@ -11,6 +11,9 @@ public class StreamRandomRange {
 		intStream.limit(5).forEach(System.out::print); //limit이 없으면 무한스트림
 		System.out.println();
 		
+		IntStream intStream2 = new Random().ints(10, 1, 9); //1~9까지의 숫자 중
+		intStream2.forEach(System.out::println);
+		
 		//특정 범위의 정수
 		IntStream rangeStream = IntStream.range(1, 10);
 		rangeStream.forEach(System.out::print);

@@ -28,6 +28,7 @@ public class StreamCreate {
 //		intStream2.forEach(System.out::println); 주석 안 걸면 오류남, 최종연산
 		System.out.println("count = " + intStream2.count()); //IntStream에는 count, sum, average 등 있음
 		//Stream<Integer>에는 count밖에 없음, 숫자외에도 여러 타입의 스트임이 가능해야하므로 숫자 스트림에만 사용할 수 있는 것은 없음
+		
 	}
 }
 

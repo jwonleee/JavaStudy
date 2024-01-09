@@ -12,12 +12,12 @@ public class StreamFlatMap {
 		);
 		
 //		Stream<Stream<String>> strStrmStrm = strArrStrm.map(Arrays::stream);
-		Stream<String> strStrm = strArrStrm.flatMap(Arrays::stream);
+		Stream<String> strStrm = strArrStrm.flatMap(Arrays::stream); //Stream<String>
 		
 		strStrm.map(String::toLowerCase)
-			.distinct()
-			.sorted()
-			.forEach(System.out::println);
+			   .distinct()
+			   .sorted()
+			   .forEach(System.out::println);
 		System.out.println();
 		
 		String[] lineArr = {
@@ -26,12 +26,11 @@ public class StreamFlatMap {
 		};
 		
 		Stream<String> lineStream = Arrays.stream(lineArr);
-		lineStream.flatMap(line -> Stream.of(line.split(" +")))
+		lineStream.flatMap(line -> Stream.of(line.split(" +"))) //Stream<String>, s.split(" +"): 공백을 구분자로 자른 문자배열
 			.map(String::toLowerCase)
 			.distinct()
 			.sorted()
 			.forEach(System.out::println);
 		System.out.println();
-		
 	}
 }
